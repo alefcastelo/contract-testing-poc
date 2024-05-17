@@ -1,54 +1,8 @@
 {
   "consumer": {
-    "name": "loan-officer-consumer"
+    "name": "client-one-consumer"
   },
   "interactions": [
-    {
-      "description": "LO by id",
-      "pending": false,
-      "request": {
-        "method": "GET",
-        "path": "/loan-officers/1"
-      },
-      "response": {
-        "body": {
-          "content": {
-            "id": 1,
-            "name": "Jammes"
-          },
-          "contentType": "application/json",
-          "encoded": false
-        },
-        "headers": {
-          "Content-Type": [
-            "application/json"
-          ]
-        },
-        "matchingRules": {
-          "body": {
-            "$.id": {
-              "combine": "AND",
-              "matchers": [
-                {
-                  "match": "integer"
-                }
-              ]
-            },
-            "$.name": {
-              "combine": "AND",
-              "matchers": [
-                {
-                  "match": "type"
-                }
-              ]
-            }
-          },
-          "status": {}
-        },
-        "status": 200
-      },
-      "type": "Synchronous/HTTP"
-    },
     {
       "description": "LO list",
       "pending": false,

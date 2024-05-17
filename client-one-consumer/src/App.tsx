@@ -5,7 +5,7 @@ import { LoanOfficerApiClient } from '@/LoanOfficerApiClient'
 const loanOfficerApiClient = new LoanOfficerApiClient('http://localhost:3000')
 
 function App() {
-  const [loanOfficer, setLoanOfficers] = useState<LoanOfficer[] | null>(null)
+  const [loanOfficers, setLoanOfficers] = useState<LoanOfficer[] | null>(null)
 
   useEffect(() => {
     loanOfficerApiClient.getAll().then((data) => setLoanOfficers(data))
@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <h1>Loan Officers</h1>
-      <ul>{loanOfficer?.map(({ id, name }) => <li key={id}>{name}</li>)}</ul>
+      <ul>{loanOfficers?.map(({ id, name }) => <li key={id}>{name}</li>)}</ul>
     </>
   )
 }

@@ -28,12 +28,7 @@ describe('Loan Officer Provider API', () => {
       providerBaseUrl: 'http://localhost:3000',
       provider: 'loan-officer-provider',
       providerVersion: '1.0.0',
-      pactUrls: [
-        path.resolve(
-          dirname(dirname(__dirname)),
-          './loan-officer-consumer/pacts/loan-officer-consumer-loan-officer-provider.json'
-        )
-      ]
+      pactUrls: [path.resolve(dirname(dirname(__dirname)), './pacts')]
     }
 
     return new Verifier(opts).verifyProvider().then(() => {

@@ -1,6 +1,6 @@
 {
   "consumer": {
-    "name": "loan-officer-consumer"
+    "name": "client-two-consumer"
   },
   "interactions": [
     {

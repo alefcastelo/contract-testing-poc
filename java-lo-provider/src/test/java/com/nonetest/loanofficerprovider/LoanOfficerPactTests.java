@@ -20,7 +20,7 @@ import au.com.dius.pact.provider.spring.junit5.PactVerificationSpringProvider;
 @EnableAutoConfiguration
 @Provider("loan-officer-provider")
 @TestPropertySource(locations = "classpath:application.properties")
-@PactFolder("pacts")
+@PactFolder("../pacts")
 class LoanOfficerPactTests {
 
   @Value("${server.host}")
