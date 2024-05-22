@@ -1,5 +1,6 @@
 package com.nonetest.loanofficerprovider;
 
+import org.apache.hc.core5.http.HttpRequest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -35,7 +36,7 @@ class LoanOfficerPactTests {
 
   @TestTemplate
   @ExtendWith(PactVerificationSpringProvider.class)
-  void pactVerificationTestTemplate(PactVerificationContext context) {
+  void pactVerificationTestTemplate(PactVerificationContext context, HttpRequest request) {
     context.verifyInteraction();
   }
 }

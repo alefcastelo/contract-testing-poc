@@ -14,8 +14,7 @@
         "body": {
           "content": [
             {
-              "id": 1,
-              "name": "Jammes"
+              "id": 1
             }
           ],
           "contentType": "application/json",
@@ -42,14 +41,6 @@
               "matchers": [
                 {
                   "match": "integer"
-                }
-              ]
-            },
-            "$[*].name": {
-              "combine": "AND",
-              "matchers": [
-                {
-                  "match": "type"
                 }
               ]
             }
