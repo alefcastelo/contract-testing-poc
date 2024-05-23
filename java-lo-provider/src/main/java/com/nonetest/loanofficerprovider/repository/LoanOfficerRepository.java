@@ -10,7 +10,7 @@ import com.nonetest.loanofficerprovider.model.LoanOfficer;
 public class LoanOfficerRepository {
   protected LoanOfficer[] loanOfficers;
 
-  LoanOfficerRepository() {
+  public LoanOfficerRepository() {
     loanOfficers = new LoanOfficer[] {
         new LoanOfficer(1, "Alice", new String[] { "CA", "NY" }),
         new LoanOfficer(2, "Bob", new String[] { "CA", "TX" }),
